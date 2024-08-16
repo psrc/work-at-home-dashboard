@@ -24,7 +24,15 @@ library(scales)
 library(quarto)
 
 overall_df <- read_csv("data/telecommuteornot_summary_trend.csv")
-work_at_home_23<-overall_df%>%filter(survey_year=='2023')%>%select(prop)%>%pull
+
+
+hybrid_df<-read_csv("data/telecommute_summary_trend.csv")
+
+work_at_home_23_all<-hybrid_df%>%filter(survey_year=='2023')%>%
+  filter(telecommute_status=='Fully At Home')%>%select(prop)%>%pull
+
+work_at_home_23_hybrid<-hybrid_df%>%filter(survey_year=='2023')%>%
+  filter(telecommute_status== 'Hybrid')%>%select(prop)%>%pull
 
 ```
 
@@ -35,21 +43,42 @@ work_at_home_23<-overall_df%>%filter(survey_year=='2023')%>%select(prop)%>%pull
 ### Row
 
 
+### Always At Home Worker Share (2023)
 
-::: {.valuebox icon="house" color="#91268F"}
+::: {.valuebox icon="house-fill" color="#91268F" title="Always at Home Worker Share (2023)"}
 
-`{r}  label_percent(accuracy = 1.0)(work_at_home_23)`
+`{r}  label_percent(accuracy = 1.0)(work_at_home_23_all)`
 :::
 
 
 
 ### Row
-
 ```{r}
-#| title: Share of Workers Who Work At Home
+#| title: Working At Home Share Trend
 
 trend<-interactive_line_chart(overall_df, y='prop', x='survey_year', fill='telecommute_freq_cond') 
 trend
+```
+
+
+## Column
+### Row
+
+
+
+::: {.valuebox icon="house" color="#F05A28" title="Hybrid Worker Share (2023)"}
+
+`{r}  label_percent(accuracy = 1.0)(work_at_home_23_hybrid)`
+:::
+
+### Row
+```{r}
+#| title: Working At Home Patterns Trend
+
+hybrid_df<-hybrid_df%>%mutate(survey_year=factor(survey_year))
+inter<-interactive_column_chart(hybrid_df, y='prop', x='survey_year', fill='telecommute_status', xlabel='Work Location Status', ylabel='Worker Share', pos='stack')
+
+inter
 ```
 
 # Demographics

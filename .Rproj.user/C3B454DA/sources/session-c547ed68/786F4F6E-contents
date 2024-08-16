@@ -7,14 +7,14 @@ $font-family-sans-serif: "Poppins";
 // colors
 
 $navbar-bg: #4a0048;
-$navbar-fg: #E3C9E3;
+$navbar-fg: White;
 
 $link-color: #40BDB8;
 $hover-color: lighten($link-color, 40%);
 
 /*-- scss:rules --*/
 .card-header {
-  background-color: #A9D46E;
+  background-color: #8CC63E;
   color:#4a0048 ;
 }
 
