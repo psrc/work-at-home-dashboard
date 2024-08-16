@@ -45,7 +45,7 @@ work_at_home_23_hybrid<-hybrid_df%>%filter(survey_year=='2023')%>%
 
 ### Always At Home Worker Share (2023)
 
-::: {.valuebox icon="house-fill" color="#91268F" title="Always at Home Worker Share (2023)"}
+::: {.valuebox icon="house-fill" color="#73CFCB" title="Always at Home Worker Share (2023)"}
 
 `{r}  label_percent(accuracy = 1.0)(work_at_home_23_all)`
 :::
@@ -66,7 +66,7 @@ trend
 
 
 
-::: {.valuebox icon="house" color="#F05A28" title="Hybrid Worker Share (2023)"}
+::: {.valuebox icon="house" color="#A9D46E" title="Hybrid Worker Share (2023)"}
 
 `{r}  label_percent(accuracy = 1.0)(work_at_home_23_hybrid)`
 :::
@@ -75,7 +75,7 @@ trend
 ```{r}
 #| title: Working At Home Patterns Trend
 
-hybrid_df<-hybrid_df%>%mutate(survey_year=factor(survey_year))
+hybrid_df<-hybrid_df%>%mutate(survey_year=factor(survey_year))%>%mutate(telecommute_status=forcats::fct_reorder(telecommute_status, -prop))
 inter<-interactive_column_chart(hybrid_df, y='prop', x='survey_year', fill='telecommute_status', xlabel='Work Location Status', ylabel='Worker Share', pos='stack')
 
 inter
