@@ -9,6 +9,7 @@ logo: images/RegionalGem2016.png
 logo-alt: "Puget Sound Regional Council Lego with 4 boxes representing the counties"
 editor_options: 
   chunk_output_type: console
+output-dir: docs
 ---
 
 ```{r}
