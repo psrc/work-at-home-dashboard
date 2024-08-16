@@ -1,0 +1,57 @@
+---
+title: "Working at Home in the Puget Sound"
+
+format: 
+  dashboard:
+    orientation: columns
+theme: [sandstone, theme/custom.scss]
+logo: images/RegionalGem2016.png
+logo-alt: "Puget Sound Regional Council Lego with 4 boxes representing the counties"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(gt)
+library(psrcplot)
+library(dplyr)
+library(scales)
+library(quarto)
+
+overall_df <- read_csv("data/telecommuteornot_summary_trend.csv")
+work_at_home_23<-overall_df%>%filter(survey_year=='2023')%>%select(prop)%>%pull
+
+```
+
+# Work at Home Overall
+
+## Column
+
+### Row
+
+
+
+::: {.valuebox icon="house" color="#91268F"}
+2023 Share:
+`{r}  label_percent(accuracy = 1.0)(work_at_home_23)`
+:::
+
+
+
+### Row
+
+```{r}
+#| title: Share of Workers Who Work At Home
+
+trend<-interactive_line_chart(overall_df, y='prop', x='survey_year', fill='telecommute_freq_cond') 
+trend
+```
+
+# Demographics
+
+# Geography
+
+# Travel Patterns

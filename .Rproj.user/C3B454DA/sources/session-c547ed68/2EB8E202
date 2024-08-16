@@ -1,0 +1,33 @@
+{
+    "id": "2EB8E202",
+    "path": "C:/GitHub/work-at-home-dashboard/work-at-home-dashboard.qmd",
+    "project_path": "work-at-home-dashboard.qmd",
+    "type": "quarto_markdown",
+    "hash": "2408999443",
+    "contents": "",
+    "dirty": false,
+    "created": 1723752382744.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "rmdVisualMode": "false",
+        "rmdVisualWrapConfigured": "true",
+        "source_window_id": "",
+        "Source": "Source",
+        "rmdVisualCollapsedChunks": "",
+        "rmdVisualModeLocation": "709:847.2000122070312",
+        "docOutlineVisible": "1",
+        "cursorPosition": "37,11",
+        "scrollLine": "24",
+        "docOutlineSize": "221",
+        "chunk_output_type": "console"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1723828979,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1723828979486,
+    "read_only": false,
+    "read_only_alternatives": []
+}
