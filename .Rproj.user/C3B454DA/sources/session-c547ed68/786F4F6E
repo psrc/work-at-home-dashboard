@@ -3,16 +3,16 @@
     "path": "C:/GitHub/work-at-home-dashboard/theme/custom.scss",
     "project_path": "theme/custom.scss",
     "type": "scss",
-    "hash": "780378434",
+    "hash": "0",
     "contents": "",
-    "dirty": false,
+    "dirty": true,
     "created": 1723828224195.0,
     "source_on_save": false,
     "relative_order": 4,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "16,27",
+        "cursorPosition": "21,9",
         "scrollLine": "0"
     },
     "folds": "",
@@ -20,7 +20,7 @@
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1723848723722,
+    "last_content_update": 1723849258204,
     "read_only": false,
     "read_only_alternatives": []
 }
