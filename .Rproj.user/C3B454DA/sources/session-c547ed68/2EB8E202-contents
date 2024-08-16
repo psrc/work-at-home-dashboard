@@ -10,6 +10,7 @@ logo-alt: "Puget Sound Regional Council Lego with 4 boxes representing the count
 editor_options: 
   chunk_output_type: console
 output-dir: docs
+output-file: index.html
 ---
 
 ```{r}
@@ -36,7 +37,7 @@ work_at_home_23<-overall_df%>%filter(survey_year=='2023')%>%select(prop)%>%pull
 
 
 ::: {.valuebox icon="house" color="#91268F"}
-2023 Share:
+
 `{r}  label_percent(accuracy = 1.0)(work_at_home_23)`
 :::
 
